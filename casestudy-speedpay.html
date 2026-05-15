@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>speedpay — case study · anand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="index.html">home</a>
+      <a href="work.html" class="active">work</a>
+      <a href="watch.html">what i watch</a>
+      <a href="read.html">what i read</a>
+      <a href="newsletters.html">newsletters</a>
+    </nav>
+
+    <a href="work.html" style="font-size:12px; color:#999; text-decoration:none; display:inline-block; margin-bottom:32px;">← back to work</a>
+
+    <h1 style="font-family:'Instrument Serif', serif; font-weight:400; font-size:42px; line-height:1.3; margin-bottom:16px; color:#0a0a0a;">speedpay — fixing the queue problem in retail that nobody had actually solved.</h1>
+
+    <p style="font-size:11px; color:#2563eb; margin-top:0; margin-bottom:40px; font-family:'DM Mono', monospace; font-weight:400; letter-spacing:0.5px; text-transform:uppercase;">case study · 2024 · founder · research, product, build</p>
+
+    <div style="border-left:3px solid #2563eb; padding:28px 0 28px 24px; margin-bottom:64px; font-family:'Instrument Serif', serif; font-size:16px; line-height:1.8; color:#333; border-top:none; border-right:none; border-bottom:none;">
+      <div style="margin-bottom:20px;"><strong style="color:#2563eb;">the problem:</strong> retail shoppers abandon stores during peak hours because billing queues are broken.</div>
+      <div style="margin-bottom:20px;"><strong style="color:#2563eb;">what i built:</strong> a scan-and-go checkout platform for both store owners and shoppers — and hit a wall that changed everything i thought i knew about the problem.</div>
+      <div style="margin-bottom:20px;"><strong style="color:#2563eb;">my role:</strong> co-founder — user research, product decisions, ground testing, rfid experimentation</div>
+      <div><strong style="color:#2563eb;">outcome:</strong> shortlisted antler india accelerator · won 2 startup challenges · spoke to 100+ shoppers</div>
+    </div>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">the problem</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">if you've ever shopped at trends, zara, or h&m on a weekend evening — you know the moment. you've picked what you want, you're ready to leave, and then there's the queue. sometimes ten people. sometimes twenty. sometimes you just put the clothes back and walk out.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">this wasn't an edge case. it was a pattern. retail stores during peak hours — weekends, evenings, sale days — were consistently losing customers at the last step. not because people didn't want to buy. because waiting felt like it wasn't worth it.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">the people experiencing this were everyone. college students, working professionals, families. the ones most likely to leave weren't the patient ones — they were the ones with the highest intent to buy, rushing between errands, not willing to spend 15 minutes in a billing queue after already spending an hour browsing.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">what made it worth solving wasn't just the customer experience angle. stores were leaving real revenue on the floor every peak hour. the queue wasn't just friction — it was a conversion problem with a measurable cost. and nobody had fixed it in the indian retail context.</p>
+
+    <hr>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">what i assumed before i started</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">coming from a cs background, my first read of the problem was technical. stores hadn't adopted the right software. they were running on slow legacy billing systems. the fix was an app — modernize the stack, give store owners a better inventory tool, give shoppers a way to scan and pay and leave. simple. clean. obvious.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">my first instinct was to build exactly that — a dual-sided platform. store owners manage inventory on one side. shoppers scan a qr code, check out themselves, and walk out. i was so confident in this framing that i almost started building before asking a single question. that instinct turned out to be the most expensive assumption i made.</p>
+
+    <hr>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">how i understood the problem</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">before writing any code, i started researching whether anyone had solved this. amazon go came up immediately — a fully automated grocery store with computer vision and no checkout at all. impressive. also $1 billion in infrastructure. then i found decathlon's self-checkout model — rfid tags on every product, scan-free billing. closer to the problem. still massive in scale. the question became: why hadn't this reached mainstream indian retail? what was the actual blocker?</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">i started talking to people. friends, family members, different age groups — do you find billing queues frustrating? yes, universally. but the more interesting conversations were with people who worked in or near retail — store managers, people who'd done internships at retail chains. that's where the picture started shifting. the problem wasn't that store owners didn't know better technology existed. it was that the infrastructure required to implement it was upstream of the store entirely.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px; font-style:italic; background:#f9f9f9; padding:20px; border-left:3px solid #2563eb; color:#555;">the insight that changed everything: this wasn't a software problem. it was a supply chain problem. for any scan-based checkout to work at scale, products need to be tagged at the manufacturing level — not by store staff. the store owner couldn't fix this alone even if they wanted to. the broken part was three steps before them in the chain. i came in thinking it was a tech gap. it was a coordination gap across an entire industry.</p>
+
+    <hr>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">what i decided to build and what i left out</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">even with that constraint visible, there was still a real problem to solve at the store level. i decided to focus on what was actually within reach — integrating store-side inventory management with a customer-facing checkout flow. the hypothesis: if we could get store owners to digitize their inventory and give shoppers a way to self-checkout within that system, we could reduce queue load meaningfully even without solving the full tagging problem.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">what i explicitly decided not to touch: the manufacturing layer. pushing rfid tagging upstream to garment factories wasn't something a two-person student team could move in any reasonable timeframe. and trying to solve it would have meant building for a problem we couldn't validate or ship against. scope discipline here wasn't giving up — it was the only way to build anything real.</p>
+
+    <hr>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">how it came together — and where it broke</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">we started building — a platform for both sides, store and customer, from scratch with a small team. the early build moved fast. inventory management on the store side, a clean checkout flow for shoppers. but mid-way through, the core question surfaced: how does a shopper actually identify what they're buying without a staff member scanning it? qr codes felt like the answer. we built around them. then we went to actual stores to test.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px; background:#fff3cd; padding:16px; border-left:3px solid #f59e0b;">qr codes broke immediately in the real environment. the flow required too many steps, lighting was inconsistent, and shoppers didn't behave the way we designed for. the product worked in a controlled setting and fell apart the moment a real person tried to use it quickly. this was the first real failure — and the most useful one. we'd optimized for a user that didn't exist.</p>
+
+    <!-- <img src="qr-flow.jpg" alt="qr checkout flow test" style="width:100%; margin:32px 0; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> -->
+    <!-- <img src="rfid-test.jpg" alt="rfid prototype testing" style="width:100%; margin:32px 0; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> -->
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">we pivoted to rfid. ordered tags ourselves, got rfid readers on loan from college, and built a working proof of concept. it worked — scanning was instant, no line-of-sight required, the experience was close to what we'd imagined from the start. and then we ran the infrastructure math. rfid at scale in indian retail — readers per store, tags per sku, retrofitting existing inventory — wasn't a startup problem. it was an industry standards problem. the unit economics didn't work without the manufacturing change we'd already scoped out. that's when we made the call to stop.</p>
+
+    <hr>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">outcome</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">speedpay didn't ship as a product. but it shipped as a body of work. we were shortlisted for the antler india accelerator program. won two startup challenges and the cash prizes that came with them. spoke to over 100 people across the research and testing process — store staff, shoppers, retail managers, supply chain people. built and broke two real prototypes. and walked away with a much more precise understanding of why hard distribution problems look like software problems from the outside.</p>
+
+    <hr>
+
+    <h2 style="font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-top:48px; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px;">what i'd do differently</h2>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">i'd spend the first two weeks doing nothing but understanding the full system — not just the customer-facing layer. the surface problem (queue is long) is real but shallow. the root problem (supply chain coordination is broken) is where the actual leverage sits. i found this eventually, but after weeks of building in the wrong direction. next time: map the whole system before writing a single line of code or making a single product decision.</p>
+
+    <p style="font-family:'Instrument Serif', serif; font-size:15px; line-height:1.9; color:#333; margin-bottom:20px;">i'd also build the team differently from the start. a problem that touches retail operations, supply chain, consumer behavior, and hardware needs people who've lived in those spaces — not just people who can build. technical ability got us far. domain diversity would have gotten us further, faster.</p>
+
+    <hr>
+
+    <p style="margin-top:48px; font-family:'DM Mono', monospace; font-weight:300; font-size:13px;"><a href="casestudy-speedpay.pdf" style="color:#999; text-decoration:none;">↓ download as pdf</a></p>
+
+    <p class="ps">this is a living document. i'll keep updating it as i understand this problem better.</p>
+
+    <p style="margin-top:64px;"><a href="work.html" style="font-size:12px; color:#999; text-decoration:none;">← back to work</a></p>
+
+  </div>
+</body>
+</html>
