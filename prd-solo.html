@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo PRD — personal AI chief of staff</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .prd-section { margin: 64px 0; }
+    .prd-section h2 { font-family:'Instrument Serif', serif; font-size:28px; font-weight:400; margin-bottom:32px; color:#2563eb; border-bottom:2px solid #f0f0f0; padding-bottom:16px; text-transform:none; letter-spacing:normal; }
+    .prd-section h3 { font-family:'Instrument Serif', serif; font-size:20px; font-weight:400; margin-top:32px; margin-bottom:20px; color:#0a0a0a; }
+    .prd-meta { font-size:11px; color:#2563eb; margin-top:0; margin-bottom:40px; font-family:'DM Mono', monospace; font-weight:400; letter-spacing:0.5px; text-transform:uppercase; }
+    .prd-callout { border-left:4px solid #2563eb; padding:28px 0 28px 24px; margin-bottom:64px; background:transparent; }
+    .prd-callout div { margin-bottom:20px; font-family:'Instrument Serif', serif; font-size:15px; line-height:1.8; color:#333; }
+    .prd-callout strong { color:#2563eb; }
+    .prd-list { list-style:none; padding:0; }
+    .prd-list li { font-family:'Instrument Serif', serif; font-size:15px; line-height:1.8; color:#333; margin-bottom:16px; padding-left:24px; position:relative; }
+    .prd-list li:before { content:"—"; position:absolute; left:0; color:#2563eb; }
+    .prd-list.no-bullets li { padding-left:0; }
+    .prd-list.no-bullets li:before { display:none; }
+    .prd-table { width:100%; margin:32px 0; border-collapse:collapse; font-family:'Instrument Serif', serif; }
+    .prd-table thead { background:#f5f5f5; }
+    .prd-table th { padding:12px; text-align:left; font-weight:600; color:#0a0a0a; border-bottom:2px solid #e0e0e0; }
+    .prd-table td { padding:12px; border-bottom:1px solid #e8e8e8; color:#333; }
+    .prd-table tr:hover { background:#fafbfc; }
+    .prd-requirement { font-family:'DM Mono', monospace; font-size:13px; font-weight:300; color:#2563eb; margin-right:8px; }
+    .prd-body { font-family:'Instrument Serif', serif; font-size:15px; line-height:1.8; color:#333; margin-bottom:20px; }
+    .back-link { font-size:12px; color:#999; text-decoration:none; display:inline-block; margin-bottom:32px; transition:color 0.15s; }
+    .back-link:hover { color:#2563eb; }
+    .vision { font-family:'Instrument Serif', serif; font-size:18px; font-weight:400; font-style:italic; color:#2563eb; margin-bottom:32px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="index.html">home</a>
+      <a href="work.html" class="active">work</a>
+      <a href="watch.html">what i watch</a>
+      <a href="read.html">what i read</a>
+      <a href="newsletters.html">newsletters</a>
+    </nav>
+
+    <a href="work.html" class="back-link">← back to work</a>
+
+    <h1 style="font-family:'Instrument Serif', serif; font-weight:400; font-size:42px; line-height:1.3; margin-bottom:16px; color:#0a0a0a;">Solo — Personal AI Chief of Staff</h1>
+
+    <p class="prd-meta">product requirement document · 2025 · product · problem, vision, features, metrics</p>
+
+    <div class="prd-callout">
+      <div><strong>the problem:</strong> solo founders are scattered across five apps with no daily plan, making it impossible to know what actually moved forward.</div>
+      <div><strong>what solo does:</strong> combines task management, AI-powered daily planning, and a contextual AI assistant into one focused workspace, then scales automatically when the first team member joins.</div>
+      <div><strong>who it's for:</strong> solo founders, independent creators, and early-stage entrepreneurs working alone before they hire.</div>
+      <div><strong>the unlock:</strong> GPT-4o function calling enables a true AI chief of staff that safely acts on tasks and generates onboarding briefs from workspace context.</div>
+    </div>
+
+    <hr>
+
+    <!-- SECTION 1 -->
+    <section class="prd-section">
+      <h2>1. The Problem</h2>
+      <p class="prd-body">Solo founders begin each day with ten half-finished workflows spread across task apps, notes, inbox, calendar, and chat, which makes it impossible to know what actually moved forward.</p>
+      <ul class="prd-list">
+        <li>Solo founders routinely "brain dump" into Notion, Slack, email, and Todoist, then spend 30–45 minutes every morning trying to reassemble what matters. This is a repeated pain point in independent founder surveys.</li>
+        <li>They make decisions reactively because the day starts without a clear, prioritized plan; work gets chosen by what feels urgent rather than what advances the startup.</li>
+        <li>At week's end, founders struggle to answer "what did I ship?" because progress is scattered across inboxes, half-complete tasks, and ad-hoc notes.</li>
+        <li>Solo builders need context-aware reminders tied to actual work, not generic task lists; current tools force them to maintain separate systems for planning, execution, and reflection.</li>
+        <li>Existing research on productivity fragmentation in remote work shows independent workers lose 2+ hours per day switching between apps; for solo founders, that loss directly undermines product momentum and burn rate.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 2 -->
+    <section class="prd-section">
+      <h2>2. Vision and Opportunity</h2>
+      <p class="vision">Make every solo founder feel like they have a chief of staff in their browser before they can afford one.</p>
+      <ul class="prd-list">
+        <li>The creator and indie founder economy is already over 50 million people globally, with early-stage solo startups representing a rapidly growing segment of that market.</li>
+        <li>An estimated 200 million people work independently worldwide, and a large fraction of them manage projects alone with no dedicated operations support.</li>
+        <li>Current tools are either too open-ended for individuals who need structure, or too team-focused and expensive before the first hire.</li>
+        <li>AI is finally ready for this problem: GPT-4o function calling and contextual workspace models mean a personal assistant can safely act on your tasks and plan your day from the content already in front of you.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 3 -->
+    <section class="prd-section">
+      <h2>3. Target Use Cases</h2>
+      
+      <h3>Solo Founder</h3>
+      <p class="prd-body" style="font-weight:600; margin-bottom:12px;">As a solo founder, I wake up with a scattered inbox, a half-empty task board, and no clear daily plan, so I need one workspace that turns messy work into a single day plan.</p>
+      <p class="prd-body">Most days, I am switching between my product roadmap, customer outreach, and engineering tickets. I've tried Notion for notes, Todoist for tasks, and ChatGPT for strategy, but none of them keep all my work in one place or help me prioritize.</p>
+
+      <h3>Independent Creator</h3>
+      <p class="prd-body" style="font-weight:600; margin-bottom:12px;">As an independent creator, I am juggling content production, audience growth, and client work with no assistant, so I need fast capture and AI-guided prioritization.</p>
+      <p class="prd-body">My day is blocked by creative work, editing, and quick client asks. I have used Trello and Asana in the past, but those tools require too much manual structure and don't help me decide which content to ship first.</p>
+
+      <h3>Early-Stage Team Lead</h3>
+      <p class="prd-body" style="font-weight:600; margin-bottom:12px;">As an early-stage team lead of 2-3 people, I am still doing most of the operational work alone, so I need a place that helps me document handoff-ready work and onboard the first hire.</p>
+      <p class="prd-body">I spend my mornings updating tasks and my afternoons coaching contractors. Existing team tools like Linear are too formal and don't support the transition from solo mode to shared team work cleanly.</p>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 4 -->
+    <section class="prd-section">
+      <h2>4. Competitive Landscape</h2>
+      
+      <h3>Notion</h3>
+      <p class="prd-body">Offers flexible pages and a powerful database, but fails solo founders because it requires manual setup and doesn't keep task context in one place. Solo founders need a lightweight system that surfaces what to do today, not a blank canvas that demands architecture.</p>
+
+      <h3>Linear</h3>
+      <p class="prd-body">Designed for software teams with structured planning and sprints, but it is wrong for this user because solo founders are not running an engineering org. It is optimized for collaboration and process, not for a single person who needs daily clarity and reactive work capture.</p>
+
+      <h3>ChatGPT</h3>
+      <p class="prd-body">Can answer questions and brainstorm, but falls short because it has no persistent task context and no direct way to update the user's actual work. Solo founders need an assistant that remembers their tasks and can act on them in the same workspace.</p>
+
+      <h3>Sunsama</h3>
+      <p class="prd-body">The closest competitor—it combines daily planning with task management—but it still misses for solo founders because it is expensive, assumes work is already organized elsewhere, and does not generate a team handoff brief when the first hire arrives.</p>
+
+      <h3 style="margin-top:40px;">The AI-Native Productivity Trend</h3>
+      <p class="prd-body">AI-native productivity tools are becoming the right choice now because function calling makes assistants capable of safe, integrated action. When the assistant can write tasks, update status, and generate briefings from the same context it uses to answer questions, it becomes a practical chief of staff instead of a disconnected chat window.</p>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 5 -->
+    <section class="prd-section">
+      <h2>5. Proposed Solution</h2>
+      <p class="prd-body" style="font-weight:600; font-size:16px;">Solo is a focused web workspace that helps solo founders capture work, generate a daily plan with AI, and then transition to a first team handoff without rebuilding everything.</p>
+      
+      <div style="margin:32px 0;">
+        <h3 style="color:#2563eb;">The Vitamin (must-have)</h3>
+        <p class="prd-body">Replace the fragmented day that starts across five apps with one workspace where task capture, daily planning, and chat are connected.</p>
+
+        <h3 style="color:#2563eb;">The Painkiller (solves immediate pain)</h3>
+        <p class="prd-body">Stop reactive, scattered work by giving founders a daily plan with top priorities, time blocks, and one thing to avoid.</p>
+
+        <h3 style="color:#2563eb;">The Steroid (enables new possibilities)</h3>
+        <p class="prd-body">Give founders a real AI chief of staff that can act on tasks through function calling and auto-create the onboarding brief when the first teammate joins.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 6 -->
+    <section class="prd-section">
+      <h2>6. Goals and Non-Goals</h2>
+      
+      <h3>Goals</h3>
+      <ul class="prd-list">
+        <li>Help solo founders start the day with a clear, actionable plan instead of a loose task list.</li>
+        <li>Make the AI assistant genuinely useful by connecting it to real tasks and the day plan, not just chat.</li>
+        <li>Ensure first-time users can add work and see value in under 10 minutes.</li>
+        <li>Enable the first team transition so the product remains valuable as the user hires a teammate.</li>
+        <li>Build an initial traction signal around weekly active users and task creation.</li>
+      </ul>
+
+      <h3>Non-Goals (V1 Out of Scope)</h3>
+      <ul class="prd-list">
+        <li><strong>Calendar integration:</strong> adds complexity and distracts from core task planning.</li>
+        <li><strong>Mobile native app:</strong> primary user works on desktop and needs quick capture plus focused planning.</li>
+        <li><strong>Email notifications:</strong> product should drive return visits through active planning, not passive alerts.</li>
+        <li><strong>Real-time collaboration:</strong> initial focus is solo workflows and first-hire transition, not fully synchronized team editing.</li>
+        <li><strong>Billing and subscriptions:</strong> validate product value before building monetization infrastructure.</li>
+        <li><strong>Long-term AI memory:</strong> keep first release scoped to tasks, day plan, and conversation history only.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 7 -->
+    <section class="prd-section">
+      <h2>7. Year 1 Success Metrics</h2>
+      <table class="prd-table">
+        <thead>
+          <tr>
+            <th>Goals</th>
+            <th>Signals</th>
+            <th>Metrics</th>
+            <th>Targets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Engagement & Adoption</td>
+            <td>Users find product valuable and return</td>
+            <td>Weekly Active Users (WAU)</td>
+            <td>35% of new signups return weekly in first session</td>
+          </tr>
+          <tr>
+            <td>AI Utility</td>
+            <td>Assistant drives real value</td>
+            <td>% of sessions using function calling</td>
+            <td>30% of active sessions use GPT-4o to create/update tasks</td>
+          </tr>
+          <tr>
+            <td>Business Value</td>
+            <td>Users reach team transition</td>
+            <td>% of accounts with team member invite</td>
+            <td>12% of active-30d accounts invite a teammate</td>
+          </tr>
+          <tr>
+            <td>Execution</td>
+            <td>Product is usable</td>
+            <td>Time to first DayPlan</td>
+            <td>Median time from signup &lt;10 minutes</td>
+          </tr>
+          <tr>
+            <td>Retention</td>
+            <td>Founders see sustained value</td>
+            <td>Week 4 retention</td>
+            <td>20% of week-1 active accounts active in week 4</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 8 -->
+    <section class="prd-section">
+      <h2>8. Conceptual Model</h2>
+      
+      <h3>Core Objects</h3>
+      <ul class="prd-list no-bullets">
+        <li style="margin-bottom:24px;"><strong style="color:#2563eb;">Tasks:</strong> A discrete unit of work with status, priority, and optional assignment. Created manually or by AI assistant. Primary item the day plan and chat reference.</li>
+        <li style="margin-bottom:24px;"><strong style="color:#2563eb;">DayPlan:</strong> AI-generated, time-blocked layout for the day with top 3 priorities and one thing to avoid. Built from brain dump and task inventory.</li>
+        <li style="margin-bottom:24px;"><strong style="color:#2563eb;">Messages:</strong> Chat conversation history between founder and Solo's AI assistant. Include both text and structured actions. Persistent for context memory.</li>
+        <li style="margin-bottom:24px;"><strong style="color:#2563eb;">TeamMember:</strong> Invited collaborator with name, email, and role. Can be assigned tasks and receives onboarding brief.</li>
+        <li style="margin-bottom:0;"><strong style="color:#2563eb;">User / Workspace:</strong> Solo founder's account, team membership, and all tasks, DayPlans, messages. Container that enables AI assistant context access.</li>
+      </ul>
+
+      <h3 style="margin-top:40px;">Primary User Flow (First Week)</h3>
+      <p class="prd-body">A founder signs up, adds a few tasks through the dashboard quick capture, and submits a brain dump. Solo returns a time-blocked DayPlan with top priorities and one thing to avoid. The founder uses the chat assistant to refine work, lets AI create a new task from a message, and then invites the first teammate. By the end of the first week, the founder has a shared task list, a generated onboarding brief, and a clear sense of what moved forward.</p>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 9 -->
+    <section class="prd-section">
+      <h2>9. Product Requirements</h2>
+      
+      <h3>Journey 1: Solo Founder Managing Work and Planning</h3>
+      
+      <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px;">Capturing and Managing Tasks</h3>
+      <ul class="prd-list">
+        <li><span class="prd-requirement">[P0]</span>Users can add a new task with title, optional description, status, and priority from the main task list.</li>
+        <li><span class="prd-requirement">[P0]</span>Dashboard provides quick-capture input for task title only, enabling one-keystroke task creation.</li>
+        <li><span class="prd-requirement">[P0]</span>Users can filter tasks by status (To Do, In Progress, Done) and priority (High, Medium, Low).</li>
+        <li><span class="prd-requirement">[P0]</span>Tasks display inline controls for status updates without leaving the list.</li>
+        <li><span class="prd-requirement">[P1]</span>Users can delete tasks with confirmation to prevent accidental removal.</li>
+        <li><span class="prd-requirement">[P1]</span>Users can sort tasks by priority and creation date.</li>
+        <li><span class="prd-requirement">[P1]</span>Task list shows compact summary of assigned team members when team exists.</li>
+        <li><span class="prd-requirement">[P2]</span>Users can add tasks from AI assistant tab via "create task" button after chat suggestion.</li>
+      </ul>
+
+      <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px;">Planning the Day with AI</h3>
+      <ul class="prd-list">
+        <li><span class="prd-requirement">[P0]</span>Dashboard includes brain dump textarea for free-form input.</li>
+        <li><span class="prd-requirement">[P0]</span>After submission, AI generates structured day plan with time blocks, top 3 priorities, and one thing to avoid.</li>
+        <li><span class="prd-requirement">[P0]</span>Generated DayPlan displays in card alongside tasks with explicit timings.</li>
+        <li><span class="prd-requirement">[P1]</span>Users can mark DayPlan items as complete and move work back to task list.</li>
+        <li><span class="prd-requirement">[P1]</span>Users can submit evening reflection note attached to current DayPlan.</li>
+        <li><span class="prd-requirement">[P1]</span>If AI times out, interface shows clear error message and retry button.</li>
+        <li><span class="prd-requirement">[P2]</span>DayPlan card includes "refresh plan" action to regenerate after adding tasks.</li>
+      </ul>
+
+      <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px;">Using the AI Chat Assistant</h3>
+      <ul class="prd-list">
+        <li><span class="prd-requirement">[P0]</span>Users can send messages and receive responses streamed via SSE.</li>
+        <li><span class="prd-requirement">[P0]</span>Assistant responses include task and DayPlan context for contextual answers.</li>
+        <li><span class="prd-requirement">[P0]</span>When AI decides to create/update a task, uses GPT-4o function calling and shows as structured card.</li>
+        <li><span class="prd-requirement">[P0]</span>After successful function call, UI confirms action with card showing task title and status.</li>
+        <li><span class="prd-requirement">[P0]</span>Chat history persists across sessions in conversation timeline.</li>
+        <li><span class="prd-requirement">[P1]</span>Empty-state chat prompt appears when no conversation exists, guiding user to ask for planning help.</li>
+        <li><span class="prd-requirement">[P1]</span>Assistant can suggest turning brain dump items into tasks with quick "create" confirmation.</li>
+        <li><span class="prd-requirement">[P2]</span>Users can tag chat responses as "useful" or "not useful" for AI quality signal.</li>
+      </ul>
+
+      <h3 style="font-size:18px; margin-top:40px; margin-bottom:16px;">Journey 2: Solo Founder Hiring First Team Member</h3>
+
+      <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px;">Inviting a Team Member</h3>
+      <ul class="prd-list">
+        <li><span class="prd-requirement">[P0]</span>Users can open invite form asking for name, email, and role.</li>
+        <li><span class="prd-requirement">[P0]</span>Submitting invite creates TeamMember entry and starts background job for onboarding brief.</li>
+        <li><span class="prd-requirement">[P0]</span>UI shows loading/polling state while onboarding brief generates via RQ + Redis.</li>
+        <li><span class="prd-requirement">[P1]</span>Users can view completed onboarding brief in dedicated section once job finishes.</li>
+        <li><span class="prd-requirement">[P1]</span>Invite confirmation includes summary of what teammate will see and what they can do.</li>
+        <li><span class="prd-requirement">[P2]</span>System emails invitee a join link if email sending is enabled.</li>
+      </ul>
+
+      <h3 style="font-size:16px; margin-top:28px; margin-bottom:16px;">Transitioning to Team Mode</h3>
+      <ul class="prd-list">
+        <li><span class="prd-requirement">[P0]</span>Once team member exists, task assignment becomes available on each task card.</li>
+        <li><span class="prd-requirement">[P0]</span>Assigned tasks show assignee name and role in task list.</li>
+        <li><span class="prd-requirement">[P1]</span>Team members view only tasks assigned to them or shared with workspace by default.</li>
+        <li><span class="prd-requirement">[P1]</span>Owner/admin has permission to invite, assign tasks, and generate onboarding briefs.</li>
+        <li><span class="prd-requirement">[P2]</span>Members can comment on tasks or update status with basic permission model.</li>
+        <li><span class="prd-requirement">[P2]</span>First team member onboarding brief includes recommended tasks based on current priorities.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 10 -->
+    <section class="prd-section">
+      <h2>10. Appendix</h2>
+
+      <h3>Product & Design Decisions</h3>
+      <ul class="prd-list">
+        <li><strong>Standalone web app:</strong> Solo must own the entire workflow from capture to planning to chat. Integrating into existing tools would force users to maintain another app and dilute AI context.</li>
+        <li><strong>Desktop-first:</strong> Solo founders spend planning time on laptops, want keyboard-driven capture, and need multi-panel view of tasks, plan, and chat.</li>
+        <li><strong>Dark theme option:</strong> Signals focus and professionalism, reduces visual noise during deep work, keeps attention on priorities without feeling generic.</li>
+        <li><strong>HTMX over React:</strong> Keeps complexity low, reduces client-side state management, enables fast shipping with server-rendered interactions and progressive enhancement.</li>
+      </ul>
+
+      <h3>GTM Strategy</h3>
+      <ul class="prd-list">
+        <li><strong>Primary channels:</strong> Founder communities (Indie Hackers, Twitter/X, Product Hunt) where solo builders share and discover tools.</li>
+        <li><strong>Positioning:</strong> Not a to-do app. A personal operating system for builders that turns daily chaos into a clear plan.</li>
+        <li><strong>Launch:</strong> Ship PRD publicly as part of product story, then invite-only alpha emphasizing AI planning and team handoff.</li>
+        <li><strong>Pricing direction:</strong> Free with own API key for v1 to remove barriers. Paid hosted tier later with managed AI usage and team onboarding.</li>
+      </ul>
+
+      <h3>Technical Stack</h3>
+      <table class="prd-table">
+        <thead>
+          <tr>
+            <th>Layer</th>
+            <th>Technology</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Backend</td>
+            <td>Python 3.11 + FastAPI</td>
+            <td>Lightweight, async-ready API with easy Python AI integration</td>
+          </tr>
+          <tr>
+            <td>Database</td>
+            <td>SQLite dev / PostgreSQL prod</td>
+            <td>Simple local dev with scalable production storage</td>
+          </tr>
+          <tr>
+            <td>ORM</td>
+            <td>SQLAlchemy + Alembic</td>
+            <td>Reliable schema management and migration workflow</td>
+          </tr>
+          <tr>
+            <td>Templates</td>
+            <td>Jinja2</td>
+            <td>Server-rendered views that simplify HTMX interactions</td>
+          </tr>
+          <tr>
+            <td>Interactivity</td>
+            <td>HTMX</td>
+            <td>Minimal client-side JS and fast iteration on focused web app</td>
+          </tr>
+          <tr>
+            <td>AI</td>
+            <td>GPT-4o with function calling, SSE streaming</td>
+            <td>Real-time assistant with safe task actions</td>
+          </tr>
+          <tr>
+            <td>Auth</td>
+            <td>itsdangerous, passlib</td>
+            <td>Secure login without overengineering</td>
+          </tr>
+          <tr>
+            <td>Jobs</td>
+            <td>RQ + Redis</td>
+            <td>Background processing for brief generation and async AI tasks</td>
+          </tr>
+          <tr>
+            <td>Monitoring</td>
+            <td>Sentry</td>
+            <td>Error tracking and performance observability</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Key Risks & Mitigations</h3>
+      <ul class="prd-list">
+        <li><strong>AI quality consistency:</strong> Keep prompts simple, surface fallback UI when assistant misses context.</li>
+        <li><strong>Habit formation:</strong> Design first session around quick wins and daily planning to make return behavior obvious.</li>
+        <li><strong>SQLite concurrency:</strong> Use SQLite only in dev, enforce PostgreSQL for production.</li>
+        <li><strong>OpenAI cost at scale:</strong> Batch prompt context, cache repeated requests, reserve high-cost usage for function calls.</li>
+        <li><strong>Scope creep:</strong> Keep v1 focused on task capture, daily planning, AI chat, and first team handoff only.</li>
+      </ul>
+
+      <p style="margin-top:48px; font-family:'DM Mono', monospace; font-weight:300; font-size:13px;">— this is a living document. updated as product understanding evolves.</p>
+    </section>
+
+  </div>
+</body>
+</html>
